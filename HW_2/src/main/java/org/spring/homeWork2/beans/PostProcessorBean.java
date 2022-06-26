@@ -11,9 +11,9 @@ public class PostProcessorBean implements BeanPostProcessor {
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof Bean) {
             if (((Bean) bean).getName() == null || ((Bean) bean).getValue() < 0) {
-                System.out.println("Bean is not valid");
+                System.out.println( beanName  + "is not valid");
             } else {
-                System.out.println("Bean is valid");
+                System.out.println(beanName + "is valid");
             }
         }
         return bean;

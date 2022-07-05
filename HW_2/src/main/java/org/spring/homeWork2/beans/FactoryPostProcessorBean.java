@@ -7,9 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FactoryPostProcessorBean implements BeanFactoryPostProcessor {
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
-        configurableListableBeanFactory.getBeanDefinition("beanB").setInitMethodName("newInitMethodForBeanB");
-        System.out.println("Name was change ");
-    }
+  @Override
+  public void postProcessBeanFactory(
+      ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
+    configurableListableBeanFactory
+        .getBeanDefinition("beanB")
+        .setInitMethodName("newInitMethodForBeanB");
+    System.out.println("Name was change ");
+  }
 }

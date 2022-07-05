@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="66242abe-cbab-484d-85b7-29ef5ef3b5cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HW_1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="2B895FaFMjgrM3nDwNs92heh9Ra" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4632184" />
+    <property name="rearrange.code.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="actions.on.save" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\berezovskyi-ihor\HW_4\src\main\java\com\epam\hw_4" />
+      <recent name="D:\berezovskyi-ihor\HW_3\src\main\java\com\sprinng\hw_3\model\DTO" />
+      <recent name="D:\berezovskyi-ihor\HW_3\src\test\java\com\sprinng\hw_3" />
+      <recent name="D:\berezovskyi-ihor\HW_3\src\main\java\com\epam\homework3" />
+      <recent name="D:\berezovskyi-ihor\HW_3\src\main\java\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\berezovskyi-ihor" />
+      <recent name="D:\berezovskyi-ihor\HW_2" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.epam.hw_4" />
+      <recent name="com.epam.homework3.service.exeption" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.spring.homeWork2.App" />
+      <module name="HW_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.spring.homeWork2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.epam.spring.homework1.Main" />
+      <module name="HW_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.spring.homework1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="berezovskyi-ihor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="berezovskyi-ihor" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw3Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.epam.homework3.Hw3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw3Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.hw_3.Hw3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw3Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sprinng.hw_3.Hw3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.epam.homework3.hw_3.Hw3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw4Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="HW_4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.epam.hw_4.Hw4Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Spring Boot.Hw3Application (1)" />
+      <item itemvalue="Spring Boot.Hw3Application" />
+      <item itemvalue="Spring Boot.Hw3Application (2)" />
+      <item itemvalue="Spring Boot.Hw3Application (3)" />
+      <item itemvalue="Spring Boot.Hw4Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Spring Boot.Hw4Application" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66242abe-cbab-484d-85b7-29ef5ef3b5cc" name="Changes" comment="" />
+      <created>1656276662828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656276662828</updated>
+      <workItem from="1656276664141" duration="2712000" />
+      <workItem from="1656337553555" duration="51000" />
+      <workItem from="1656412900254" duration="9257000" />
+      <workItem from="1656508934720" duration="444000" />
+      <workItem from="1656583665883" duration="9543000" />
+      <workItem from="1656604456438" duration="2041000" />
+      <workItem from="1656607241597" duration="208000" />
+      <workItem from="1656607475068" duration="50000" />
+      <workItem from="1656607532477" duration="23000" />
+      <workItem from="1656607584825" duration="28000" />
+      <workItem from="1656607683180" duration="72000" />
+      <workItem from="1656607801756" duration="2042000" />
+      <workItem from="1656857967911" duration="4845000" />
+      <workItem from="1656925498611" duration="140000" />
+      <workItem from="1656925652999" duration="115000" />
+      <workItem from="1656925778575" duration="9128000" />
+      <workItem from="1657030770314" duration="1337000" />
+      <workItem from="1657032244180" duration="143000" />
+      <workItem from="1657032400644" duration="217000" />
+      <workItem from="1657032632568" duration="355000" />
+      <workItem from="1657033062232" duration="407000" />
+      <workItem from="1657033483193" duration="124000" />
+      <workItem from="1657033620493" duration="557000" />
+      <workItem from="1657034229570" duration="7340000" />
+      <workItem from="1657051761711" duration="1383000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

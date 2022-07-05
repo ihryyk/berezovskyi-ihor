@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("org.spring.homeWork2.beans")
-public class Config1 {
-}
+public class Config1 {}

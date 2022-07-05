@@ -7,17 +7,17 @@ import javax.annotation.PreDestroy;
 
 @Component
 public class BeanE extends Bean {
-    public BeanE() {
-        super();
-    }
+  public BeanE() {
+    super();
+  }
 
-    @PostConstruct
-    public void postConstrict(){
-        System.out.println("BeanE method PostConstruct");
-    }
-    @PreDestroy
-    public void preDestroy(){
-        System.out.println("BeanE method PreDestroy");
-    }
+  @PostConstruct
+  public void postConstrict() {
+    System.out.println("BeanE method PostConstruct");
+  }
 
+  @PreDestroy
+  public void preDestroy() {
+    System.out.println("BeanE method PreDestroy");
+  }
 }

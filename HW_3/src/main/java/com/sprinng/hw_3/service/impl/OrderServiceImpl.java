@@ -1,7 +1,6 @@
 package com.sprinng.hw_3.service.impl;
 
 
-
 import com.sprinng.hw_3.controller.dto.OrderDTO;
 import com.sprinng.hw_3.controller.mapper.OrderMapper;
 import com.sprinng.hw_3.model.entity.Order;
@@ -12,7 +11,6 @@ import com.sprinng.hw_3.service.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
 
 import java.util.List;
 
@@ -34,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderDTO> getAllByUserId(long userId) throws ServiceException {
-        log.info("get all orders by user id {}",userId);
+        log.info("get all orders by user id {}", userId);
         return orderRepository.getAllByUserId(userId).stream().map(OrderMapper.INSTANCE::mapToDto).toList();
     }
 
@@ -42,10 +40,10 @@ public class OrderServiceImpl implements OrderService {
     public OrderDTO getById(long id) throws ServiceException {
         Order order = orderRepository.getById(id);
 
-        if (order==null){
+        if (order == null) {
             throw new ServiceException(format("ORDER with id %o not found", id));
         }
-        log.info("get order by id {}",id);
+        log.info("get order by id {}", id);
         return OrderMapper.INSTANCE.mapToDto(order);
     }
 
@@ -65,6 +63,6 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void changeOrderStatus(long id, OrderStatus orderStatus) throws ServiceException {
         log.info("change order status to {} in order with id {}", orderStatus, id);
-        orderRepository.changeOrderStatus(id,orderStatus);
+        orderRepository.changeOrderStatus(id, orderStatus);
     }
 }

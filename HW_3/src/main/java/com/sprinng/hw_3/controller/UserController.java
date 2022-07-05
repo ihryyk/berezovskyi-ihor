@@ -2,7 +2,6 @@ package com.sprinng.hw_3.controller;
 
 
 import com.sprinng.hw_3.controller.dto.UserDTO;
-import com.sprinng.hw_3.model.entity.User;
 import com.sprinng.hw_3.service.UserService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @Slf4j
 @RestController()
 @RequiredArgsConstructor
@@ -54,7 +54,7 @@ public class UserController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @PatchMapping (value = "/user/{id}")
+    @PatchMapping(value = "/user/{id}")
     public void changeLockStatus(@PathVariable long id, @RequestBody boolean lockStatus) throws ServiceException {
         log.info("change lock status to {} in user with id {}", lockStatus, id);
         userService.changeLockStatus(id, lockStatus);

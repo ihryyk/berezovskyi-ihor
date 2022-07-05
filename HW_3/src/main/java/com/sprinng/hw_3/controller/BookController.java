@@ -2,7 +2,6 @@ package com.sprinng.hw_3.controller;
 
 
 import com.sprinng.hw_3.controller.dto.BookDTO;
-import com.sprinng.hw_3.model.entity.Book;
 import com.sprinng.hw_3.service.BookService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
 import lombok.RequiredArgsConstructor;
@@ -49,7 +48,7 @@ public class BookController {
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(value = "/book")
     public void updateBook(@RequestBody BookDTO bookDTO) throws ServiceException {
-        log.info("update book with title {}",bookDTO.getTitle());
+        log.info("update book with title {}", bookDTO.getTitle());
         bookService.update(bookDTO);
     }
 
@@ -57,7 +56,7 @@ public class BookController {
     @DeleteMapping(value = "/book/{id}")
     public void deleteBookById(@PathVariable Long id) throws ServiceException {
         log.info("delete book by id {}", id);
-       bookService.delete(id);
+        bookService.delete(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -69,8 +68,8 @@ public class BookController {
 
     @ResponseStatus(HttpStatus.OK)
     @PatchMapping(value = "/book/{id}")
-    public void changeNumberOfBook(@PathVariable long id, @RequestBody int number){
+    public void changeNumberOfBook(@PathVariable long id, @RequestBody int number) {
         log.info("change the number of books to {}", number);
-        bookService.changeNumber(id,number);
+        bookService.changeNumber(id, number);
     }
 }

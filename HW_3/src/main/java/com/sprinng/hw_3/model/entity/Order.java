@@ -1,7 +1,6 @@
 package com.sprinng.hw_3.model.entity;
 
 
-
 import com.sprinng.hw_3.model.enums.BookOption;
 import com.sprinng.hw_3.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -12,11 +11,6 @@ import lombok.NoArgsConstructor;
 import java.sql.Date;
 import java.util.List;
 
-/**
- * Used to store information about Order.
- *
- * @author Ihor Berezovskyi
- */
 @Builder
 @Data
 @AllArgsConstructor
@@ -34,7 +28,6 @@ public class Order {
     private OrderStatus orderStatus;
 
     private Date arrivalDate;
-
 
 
 }

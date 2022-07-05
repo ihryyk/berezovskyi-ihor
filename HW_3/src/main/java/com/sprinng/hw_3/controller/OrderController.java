@@ -2,7 +2,6 @@ package com.sprinng.hw_3.controller;
 
 
 import com.sprinng.hw_3.controller.dto.OrderDTO;
-import com.sprinng.hw_3.model.entity.Order;
 import com.sprinng.hw_3.model.enums.OrderStatus;
 import com.sprinng.hw_3.service.OrderService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
@@ -29,16 +28,17 @@ public class OrderController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/order/{userId}")
     public List<OrderDTO> getOrdersByUserId(@PathVariable long userId) throws ServiceException {
-        log.info("get all orders by user id {}",userId);
+        log.info("get all orders by user id {}", userId);
         return orderService.getAllByUserId(userId);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/order/{id}")
     public OrderDTO getOrdersById(@PathVariable long id) throws ServiceException {
-        log.info("get order by id {}",id);
+        log.info("get order by id {}", id);
         return orderService.getById(id);
     }
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/order/")
     public List<OrderDTO> getAllOrders() throws ServiceException {
@@ -55,7 +55,7 @@ public class OrderController {
 
     @ResponseStatus(HttpStatus.OK)
     @PatchMapping(value = "/order/{id}")
-    public void changeOrderStatus(@PathVariable long id, @RequestBody OrderStatus orderStatus){
+    public void changeOrderStatus(@PathVariable long id, @RequestBody OrderStatus orderStatus) {
         log.info("change order status to {} in order with id {}", orderStatus, id);
         orderService.changeOrderStatus(id, orderStatus);
     }

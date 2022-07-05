@@ -11,7 +11,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-
 import java.util.List;
 
 import static java.lang.String.format;
@@ -27,11 +26,11 @@ public class BookServiceImpl implements BookService {
 
         Book book = bookRepository.getById(id);
 
-           if (book==null){
-               throw new ServiceException(format("Book with id %o not found", id));
-           }
+        if (book == null) {
+            throw new ServiceException(format("Book with id %o not found", id));
+        }
         log.info("get book by id {}", id);
-           return BookMapper.INSTANCE.mapToDto(book);
+        return BookMapper.INSTANCE.mapToDto(book);
     }
 
     @Override
@@ -55,7 +54,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void changeNumber(long id, int newNumber) throws ServiceException {
         log.info("change the number of books to {}", newNumber);
-        bookRepository.changeNumber(id,newNumber);
+        bookRepository.changeNumber(id, newNumber);
     }
 
     @Override

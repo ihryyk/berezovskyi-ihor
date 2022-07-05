@@ -10,10 +10,16 @@ import java.util.List;
 
 public interface PassRepository {
     public void changePassStatus(long passId, PassStatus passStatus) throws RepositoryExeption;
+
     public List<Book> getBooksById(long passId) throws RepositoryExeption;
+
     public void create(Pass pass) throws RepositoryExeption;
+
     public List<Pass> getAll() throws RepositoryExeption;
+
     public List<Pass> getAllByUserId(long userID) throws RepositoryExeption;
+
     public void update(Pass pass) throws RepositoryExeption;
+
     public void updatePenalty(long id, int penalty) throws RepositoryExeption;
 }

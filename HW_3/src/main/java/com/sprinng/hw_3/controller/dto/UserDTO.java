@@ -8,13 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
-/**
- * Used to store information about User.
- *
- * @author Ihor Berezovskyi
- */
 @Builder
 @Data
 @AllArgsConstructor

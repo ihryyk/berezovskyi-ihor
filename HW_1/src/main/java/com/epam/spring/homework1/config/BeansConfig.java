@@ -7,5 +7,4 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @ComponentScan("com.epam.spring.homework1.beans")
 @Import(OtherConfig.class)
-public class BeansConfig {
-}
+public class BeansConfig {}

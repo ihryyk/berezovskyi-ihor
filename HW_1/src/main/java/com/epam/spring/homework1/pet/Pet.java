@@ -3,17 +3,17 @@ package com.epam.spring.homework1.pet;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
 @Component
-public class Pet  {
-    List<Animal> pets;
+public class Pet {
+  private final List<Animal> pets;
 
-    public Pet(List<Animal> pets) {
-        this.pets = pets;
-    }
+  public Pet(List<Animal> pets) {
 
-    public void printPets(){
-        for (Animal animal: pets) {
-            System.out.println(animal.getClass().getSimpleName());
-        }
-    }
+    this.pets = pets;
+  }
+
+  public void printPets() {
+    pets.forEach(pet -> System.out.println(pet.getClass().getSimpleName()));
+  }
 }

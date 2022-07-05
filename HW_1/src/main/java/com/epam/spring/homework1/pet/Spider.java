@@ -5,5 +5,4 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(4)
-public class Spider implements Animal {
-}
+public class Spider implements Animal {}

@@ -5,5 +5,4 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(3)
-public class Cheetah implements Animal{
-}
+public class Cheetah implements Animal {}

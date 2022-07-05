@@ -12,7 +12,7 @@ hs_err_pid*
 ##############################
 ## Maven
 ##############################
-HW_2/target/
+../HW_2/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -63,7 +63,7 @@ local.properties
 
 ##############################
 ## NetBeans
-##############################
+##############################git
 nbproject/private/
 build/
 nbbuild/

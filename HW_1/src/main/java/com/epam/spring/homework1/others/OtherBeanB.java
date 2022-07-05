@@ -10,7 +10,8 @@ public class OtherBeanB {
 
   @Autowired
   public void setBeanB(BeanB beanB) {
-    System.out.println(this.getClass().getSimpleName()
+    System.out.println(
+        this.getClass().getSimpleName()
             + ", "
             + beanB.getClass().getSimpleName()
             + " was injected through the constructor");

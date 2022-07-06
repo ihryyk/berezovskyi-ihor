@@ -1,8 +1,6 @@
 package com.epam.hw_4.service.impl;
 
 
-
-
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.controller.mapper.UserMapper;
 import com.epam.hw_4.model.entity.User;
@@ -14,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor

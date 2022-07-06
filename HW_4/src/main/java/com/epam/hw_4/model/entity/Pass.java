@@ -9,11 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 
-/**
- * Used to store information about Pass.
- *
- * @author Ihor Berezovskyi
- */
 @Builder
 @Data
 @AllArgsConstructor
@@ -30,8 +25,6 @@ public class Pass {
 
     private int penalty;
 
-
     private Order order;
-
 
 }

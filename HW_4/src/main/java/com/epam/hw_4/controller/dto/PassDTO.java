@@ -2,7 +2,6 @@ package com.epam.hw_4.controller.dto;
 
 
 import com.epam.hw_4.model.enums.PassStatus;
-import com.epam.hw_4.model.enums.PassStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

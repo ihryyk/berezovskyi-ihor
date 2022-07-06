@@ -1,7 +1,6 @@
 package com.epam.hw_4.controller.dto;
 
 
-
 import com.epam.hw_4.model.enums.BookOption;
 import com.epam.hw_4.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -15,11 +14,6 @@ import javax.validation.constraints.NotBlank;
 import java.sql.Date;
 import java.util.List;
 
-/**
- * Used to store information about Order.
- *
- * @author Ihor Berezovskyi
- */
 @Builder
 @Data
 @AllArgsConstructor
@@ -42,7 +36,6 @@ public class OrderDTO {
 
     @Future
     public Date arrivalDate;
-
 
 
 }

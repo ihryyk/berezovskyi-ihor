@@ -2,11 +2,11 @@ package com.epam.hw_4.controller.Validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidUserName implements ConstraintValidator<UserNameValidation, String> {
-    private final String USER_NAME_REGEX="^([A-ZА-ЯЄІЇ])((['][A-Zа-яєії])?)([a-zа-яєії]+)([-][A-ZА-ЯІЇ]((['][A-Zа-яєії])?)[a-zа-яєії']+)?";
+    private final String USER_NAME_REGEX = "^([A-ZА-ЯЄІЇ])((['][A-Zа-яєії])?)([a-zа-яєії]+)([-][A-ZА-ЯІЇ]((['][A-Zа-яєії])?)[a-zа-яєії']+)?";
+
     @Override
     public void initialize(UserNameValidation constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);

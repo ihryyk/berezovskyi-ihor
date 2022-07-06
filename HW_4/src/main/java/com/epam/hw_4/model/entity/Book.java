@@ -5,11 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Used to store information about Book.
- *
- * @author Ihor Berezovskyi
- */
 @Builder
 @Data
 @AllArgsConstructor

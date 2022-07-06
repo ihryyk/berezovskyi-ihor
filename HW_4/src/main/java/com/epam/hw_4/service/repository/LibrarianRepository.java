@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface LibrarianRepository {
     public void create(User librarian) throws RepositoryException;
+
     public List<User> getAll() throws RepositoryException;
 }

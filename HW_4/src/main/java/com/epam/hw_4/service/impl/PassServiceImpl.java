@@ -1,7 +1,6 @@
 package com.epam.hw_4.service.impl;
 
 
-
 import com.epam.hw_4.controller.dto.BookDTO;
 import com.epam.hw_4.controller.dto.PassDTO;
 import com.epam.hw_4.controller.mapper.BookMapper;
@@ -27,12 +26,12 @@ public class PassServiceImpl implements PassService {
     @Override
     public void changePassStatus(long id, PassStatus passStatus) throws ServiceException {
         log.info("change pass status to {} in pass with id {}", passStatus, id);
-            passRepository.changePassStatus(id,passStatus);
+        passRepository.changePassStatus(id, passStatus);
     }
 
     @Override
     public List<BookDTO> getBooksById(long id) throws ServiceException {
-        log.info("get books from pass by pass id {}",id);
+        log.info("get books from pass by pass id {}", id);
         return passRepository.getBooksById(id).stream().map(BookMapper.INSTANCE::mapToDto).toList();
     }
 
@@ -65,6 +64,6 @@ public class PassServiceImpl implements PassService {
     @Override
     public void updatePenalty(long id, int penalty) throws ServiceException {
         log.info("update penalty to {} in pass with id {}", penalty, id);
-        passRepository.updatePenalty(id,penalty);
+        passRepository.updatePenalty(id, penalty);
     }
 }

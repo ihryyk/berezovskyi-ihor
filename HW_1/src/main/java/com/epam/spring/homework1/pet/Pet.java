@@ -9,7 +9,6 @@ public class Pet {
   private final List<Animal> pets;
 
   public Pet(List<Animal> pets) {
-
     this.pets = pets;
   }
 

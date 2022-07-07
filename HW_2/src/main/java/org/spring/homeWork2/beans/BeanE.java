@@ -7,6 +7,7 @@ import javax.annotation.PreDestroy;
 
 @Component
 public class BeanE extends Bean {
+
   public BeanE() {
     super();
   }

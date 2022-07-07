@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FactoryPostProcessorBean implements BeanFactoryPostProcessor {
+
   @Override
   public void postProcessBeanFactory(
       ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {

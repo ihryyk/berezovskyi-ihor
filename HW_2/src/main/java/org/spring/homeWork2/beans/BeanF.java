@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Lazy
 public class BeanF extends Bean {
+
   public BeanF() {
     super();
   }

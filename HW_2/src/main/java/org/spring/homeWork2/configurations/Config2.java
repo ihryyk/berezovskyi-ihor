@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 @Import(Config1.class)
 @PropertySource("classpath:values.properties")
 public class Config2 {
+
   @Autowired Environment environment;
 
   @Bean(initMethod = "initB", destroyMethod = "destroyB")

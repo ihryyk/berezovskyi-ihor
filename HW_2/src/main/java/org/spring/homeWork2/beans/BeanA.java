@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BeanA extends Bean implements InitializingBean, DisposableBean {
+
   public BeanA() {
     super();
   }

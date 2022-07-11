@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.controller.dto;
 
-
 import com.sprinng.hw_3.model.enums.PassStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,17 +14,15 @@ import java.sql.Date;
 @NoArgsConstructor
 public class PassDTO {
 
-    public long id;
+  public long id;
 
-    public Date startDate;
+  public Date startDate;
 
-    public Date endDate;
+  public Date endDate;
 
-    public PassStatus passStatus;
+  public PassStatus passStatus;
 
-    public int penalty;
+  public int penalty;
 
-    public OrderDTO order;
-
-
+  public OrderDTO order;
 }

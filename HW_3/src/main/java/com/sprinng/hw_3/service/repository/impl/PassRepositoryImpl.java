@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.service.repository.impl;
 
-
 import com.sprinng.hw_3.model.entity.Book;
 import com.sprinng.hw_3.model.entity.Pass;
 import com.sprinng.hw_3.model.enums.PassStatus;
@@ -19,38 +18,30 @@ import java.util.List;
 @Repository
 public class PassRepositoryImpl implements PassRepository {
 
-    @Override
-    public void changePassStatus(long passId, PassStatus passStatus) throws RepositoryExeption {
+  @Override
+  public void changePassStatus(long passId, PassStatus passStatus) throws RepositoryExeption {}
 
-    }
+  @Override
+  public List<Book> getBooksById(long passId) throws RepositoryExeption {
+    return null;
+  }
 
-    @Override
-    public List<Book> getBooksById(long passId) throws RepositoryExeption {
-        return null;
-    }
+  @Override
+  public void create(Pass pass) throws RepositoryExeption {}
 
-    @Override
-    public void create(Pass pass) throws RepositoryExeption {
+  @Override
+  public List<Pass> getAll() throws RepositoryExeption {
+    return null;
+  }
 
-    }
+  @Override
+  public List<Pass> getAllByUserId(long userID) throws RepositoryExeption {
+    return null;
+  }
 
-    @Override
-    public List<Pass> getAll() throws RepositoryExeption {
-        return null;
-    }
+  @Override
+  public void update(Pass pass) throws RepositoryExeption {}
 
-    @Override
-    public List<Pass> getAllByUserId(long userID) throws RepositoryExeption {
-        return null;
-    }
-
-    @Override
-    public void update(Pass pass) throws RepositoryExeption {
-
-    }
-
-    @Override
-    public void updatePenalty(long id, int penalty) throws RepositoryExeption {
-
-    }
+  @Override
+  public void updatePenalty(long id, int penalty) throws RepositoryExeption {}
 }

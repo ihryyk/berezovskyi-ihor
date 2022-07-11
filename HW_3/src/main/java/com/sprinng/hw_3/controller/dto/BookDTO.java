@@ -5,24 +5,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class BookDTO {
 
-    public long id;
+  public long id;
 
-    public int year;
+  public int year;
 
-    public String title;
+  public String title;
 
-    public String author;
+  public String author;
 
-    public String publishingHouse;
+  public String publishingHouse;
 
-    public int number;
-
+  public int number;
 }

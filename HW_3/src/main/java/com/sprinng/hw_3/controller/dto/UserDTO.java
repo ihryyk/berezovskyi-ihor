@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.controller.dto;
 
-
 import com.sprinng.hw_3.model.entity.Role;
 import com.sprinng.hw_3.model.enums.LockStatus;
 import lombok.AllArgsConstructor;
@@ -14,17 +13,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDTO {
 
-    public long id;
+  public long id;
 
-    public String name;
+  public String name;
 
-    public String emailAddress;
+  public String emailAddress;
 
-    public String password;
+  public String password;
 
-    public Role role;
+  public Role role;
 
-    public LockStatus lockStatus;
-
-
+  public LockStatus lockStatus;
 }

@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.service.repository.impl;
 
-
 import com.sprinng.hw_3.model.entity.User;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;
 import com.sprinng.hw_3.service.repository.LibrarianRepository;
@@ -17,13 +16,11 @@ import java.util.List;
 @Repository
 public class LibrarianRepositoryImpl implements LibrarianRepository {
 
-    @Override
-    public void create(User librarian) throws RepositoryExeption {
+  @Override
+  public void create(User librarian) throws RepositoryExeption {}
 
-    }
-
-    @Override
-    public List<User> getAll() throws RepositoryExeption {
-        return null;
-    }
+  @Override
+  public List<User> getAll() throws RepositoryExeption {
+    return null;
+  }
 }

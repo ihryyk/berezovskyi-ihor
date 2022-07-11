@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.controller;
 
-
 import com.sprinng.hw_3.controller.dto.UserDTO;
 import com.sprinng.hw_3.service.LibrarianService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
@@ -15,19 +14,19 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class LibrarianController {
-    private final LibrarianService librarianService;
+  private final LibrarianService librarianService;
 
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(value = "/librarian")
-    public void createLibrarian(@RequestBody UserDTO librarian) throws ServiceException {
-        log.info("create librarian with email {}", librarian.getEmailAddress());
-        librarianService.create(librarian);
-    }
+  @ResponseStatus(HttpStatus.CREATED)
+  @PostMapping(value = "/librarian")
+  public void createLibrarian(@RequestBody UserDTO librarian) throws ServiceException {
+    log.info("create librarian with email {}", librarian.getEmailAddress());
+    librarianService.create(librarian);
+  }
 
-    @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "/librarian")
-    public List<UserDTO> getAllLibrarians() throws ServiceException {
-        log.info("get all librarians");
-        return librarianService.getAll();
-    }
+  @ResponseStatus(HttpStatus.OK)
+  @GetMapping(value = "/librarian")
+  public List<UserDTO> getAllLibrarians() throws ServiceException {
+    log.info("get all librarians");
+    return librarianService.getAll();
+  }
 }

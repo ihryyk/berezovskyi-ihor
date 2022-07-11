@@ -1,6 +1,5 @@
 package com.sprinng.hw_3.controller.dto;
 
-
 import com.sprinng.hw_3.model.enums.BookOption;
 import com.sprinng.hw_3.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -17,18 +16,15 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderDTO {
 
-    public long id;
+  public long id;
 
-    public UserDTO user;
+  public UserDTO user;
 
+  public List<BookDTO> orderBooks;
 
-    public List<BookDTO> orderBooks;
+  public BookOption bookOption;
 
-    public BookOption bookOption;
+  public OrderStatus orderStatus;
 
-    public OrderStatus orderStatus;
-
-    public Date arrivalDate;
-
-
+  public Date arrivalDate;
 }

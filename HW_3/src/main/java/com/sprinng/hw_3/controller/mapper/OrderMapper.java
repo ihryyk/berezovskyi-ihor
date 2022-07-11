@@ -7,9 +7,9 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface OrderMapper {
-    OrderMapper INSTANCE = Mappers.getMapper(OrderMapper.class);
+  OrderMapper INSTANCE = Mappers.getMapper(OrderMapper.class);
 
-    Order mapToEntity(OrderDTO orderDTO);
+  Order mapToEntity(OrderDTO orderDTO);
 
-    OrderDTO mapToDto(Order order);
+  OrderDTO mapToDto(Order order);
 }

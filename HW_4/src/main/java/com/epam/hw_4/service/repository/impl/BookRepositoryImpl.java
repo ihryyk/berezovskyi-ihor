@@ -1,6 +1,5 @@
 package com.epam.hw_4.service.repository.impl;
 
-
 import com.epam.hw_4.model.entity.Book;
 import com.epam.hw_4.service.exeption.RepositoryException;
 import com.epam.hw_4.service.repository.BookRepository;
@@ -17,44 +16,35 @@ import java.util.List;
 @Repository
 public class BookRepositoryImpl implements BookRepository {
 
+  @Override
+  public Book getById(long bookId) throws RepositoryException {
+    return null;
+  }
 
-    @Override
-    public Book getById(long bookId) throws RepositoryException {
-        return null;
-    }
+  @Override
+  public List<Book> getByAuthor(String author) throws RepositoryException {
+    return null;
+  }
 
-    @Override
-    public List<Book> getByAuthor(String author) throws RepositoryException {
-        return null;
-    }
+  @Override
+  public List<Book> getAll() throws RepositoryException {
+    return null;
+  }
 
-    @Override
-    public List<Book> getAll() throws RepositoryException {
-        return null;
-    }
+  @Override
+  public List<Book> getByTitle(String title) throws RepositoryException {
+    return null;
+  }
 
-    @Override
-    public List<Book> getByTitle(String title) throws RepositoryException {
-        return null;
-    }
+  @Override
+  public void changeNumber(long bookId, int newNumber) throws RepositoryException {}
 
-    @Override
-    public void changeNumber(long bookId, int newNumber) throws RepositoryException {
+  @Override
+  public void update(Book updatedBook) throws RepositoryException {}
 
-    }
+  @Override
+  public void delete(long id) throws RepositoryException {}
 
-    @Override
-    public void update(Book updatedBook) throws RepositoryException {
-
-    }
-
-    @Override
-    public void delete(long id) throws RepositoryException {
-
-    }
-
-    @Override
-    public void add(Book book) throws RepositoryException {
-
-    }
+  @Override
+  public void add(Book book) throws RepositoryException {}
 }

@@ -13,28 +13,17 @@ import javax.validation.constraints.Positive;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class BookDTO {
 
-    public long id;
+  public long id;
 
-    @NotBlank
-    @Positive
-    public int year;
+  @NotBlank @Positive public int year;
 
-    @NotNull
-    @NotBlank
-    public String title;
+  @NotNull @NotBlank public String title;
 
-    @NotNull
-    @NotBlank
-    public String author;
+  @NotNull @NotBlank public String author;
 
-    @NotNull
-    @NotBlank
-    public String publishingHouse;
+  @NotNull @NotBlank public String publishingHouse;
 
-    @NotBlank
-    public int number;
-
+  @NotBlank public int number;
 }

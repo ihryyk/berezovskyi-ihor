@@ -1,6 +1,5 @@
 package com.epam.hw_4.model.entity;
 
-
 import com.epam.hw_4.model.enums.LockStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,16 +12,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 
-    private long id;
+  private long id;
 
-    private String name;
+  private String name;
 
-    private String emailAddress;
+  private String emailAddress;
 
-    private String password;
+  private String password;
 
-    private Role role;
+  private Role role;
 
-    private LockStatus lockStatus;
-
+  private LockStatus lockStatus;
 }

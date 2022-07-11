@@ -1,6 +1,5 @@
 package com.epam.hw_4.controller.dto;
 
-
 import com.epam.hw_4.controller.Validation.UserNameValidation;
 import com.epam.hw_4.model.entity.Role;
 import com.epam.hw_4.model.enums.LockStatus;
@@ -20,24 +19,17 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 public class UserDTO {
 
-    public long id;
+  public long id;
 
-    @UserNameValidation
-    public String name;
+  @UserNameValidation public String name;
 
-    @NotBlank
-    @Email
-    public String emailAddress;
+  @NotBlank @Email public String emailAddress;
 
-    @NotNull
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")
-    public String password;
+  @NotNull
+  @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")
+  public String password;
 
-    @NotNull
-    public Role role;
+  @NotNull public Role role;
 
-    @NotNull
-    public LockStatus lockStatus;
-
-
+  @NotNull public LockStatus lockStatus;
 }

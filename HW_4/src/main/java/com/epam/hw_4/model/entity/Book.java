@@ -9,19 +9,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Book {
 
-    private long id;
+  private long id;
 
-    private int year;
+  private int year;
 
-    private String title;
+  private String title;
 
-    private String author;
+  private String author;
 
-    private String publishingHouse;
+  private String publishingHouse;
 
-    private int number;
-
+  private int number;
 }

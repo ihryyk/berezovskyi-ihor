@@ -9,24 +9,24 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Slf4j
 @RestControllerAdvice
 public class HandlerException {
-    @ExceptionHandler(ServiceException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Exception handleServiceException(ServiceException ex) {
-        log.error("ServiceException: exception {}", ex.getMessage(), ex);
-        return new Exception(ex.getMessage());
-    }
+  @ExceptionHandler(ServiceException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public Exception handleServiceException(ServiceException ex) {
+    log.error("ServiceException: exception {}", ex.getMessage(), ex);
+    return new Exception(ex.getMessage());
+  }
 
-    @ExceptionHandler(ControllerException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Exception handleControllerException(ControllerException ex) {
-        log.error("ControllerException: exception {}", ex.getMessage(), ex);
-        return new Exception(ex.getMessage());
-    }
+  @ExceptionHandler(ControllerException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public Exception handleControllerException(ControllerException ex) {
+    log.error("ControllerException: exception {}", ex.getMessage(), ex);
+    return new Exception(ex.getMessage());
+  }
 
-    @ExceptionHandler(RepositoryException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Exception handleRepositoryException(RepositoryException ex) {
-        log.error("RepositoryException: exception {}", ex.getMessage(), ex);
-        return new Exception(ex.getMessage());
-    }
+  @ExceptionHandler(RepositoryException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public Exception handleRepositoryException(RepositoryException ex) {
+    log.error("RepositoryException: exception {}", ex.getMessage(), ex);
+    return new Exception(ex.getMessage());
+  }
 }

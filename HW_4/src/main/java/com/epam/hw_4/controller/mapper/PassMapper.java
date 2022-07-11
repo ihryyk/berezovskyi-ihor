@@ -7,9 +7,9 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface PassMapper {
-    PassMapper INSTANCE = Mappers.getMapper(PassMapper.class);
+  PassMapper INSTANCE = Mappers.getMapper(PassMapper.class);
 
-    Pass mapToEntity(PassDTO passDTO);
+  Pass mapToEntity(PassDTO passDTO);
 
-    PassDTO mapToDto(Pass pass);
+  PassDTO mapToDto(Pass pass);
 }

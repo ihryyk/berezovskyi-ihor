@@ -1,6 +1,5 @@
 package com.epam.hw_4.service.impl;
 
-
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.controller.mapper.UserMapper;
 import com.epam.hw_4.model.entity.User;
@@ -18,18 +17,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LibrarianServiceImpl implements LibrarianService {
 
-    private final LibrarianRepository librarianRepository;
+  private final LibrarianRepository librarianRepository;
 
-    @Override
-    public void create(UserDTO librarianDTO) throws ServiceException {
-        User librarian = UserMapper.INSTANCE.mapToEntity(librarianDTO);
-        librarianRepository.create(librarian);
-        log.info("create librarian with email {}", librarian.getEmailAddress());
-    }
+  @Override
+  public void create(UserDTO librarianDTO) throws ServiceException {
+    User librarian = UserMapper.INSTANCE.mapToEntity(librarianDTO);
+    librarianRepository.create(librarian);
+    log.info("create librarian with email {}", librarian.getEmailAddress());
+  }
 
-    @Override
-    public List<UserDTO> getAll() throws ServiceException {
-        log.info("get all librarians");
-        return librarianRepository.getAll().stream().map(UserMapper.INSTANCE::mapToDto).toList();
-    }
+  @Override
+  public List<UserDTO> getAll() throws ServiceException {
+    log.info("get all librarians");
+    return librarianRepository.getAll().stream().map(UserMapper.INSTANCE::mapToDto).toList();
+  }
 }

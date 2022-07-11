@@ -1,6 +1,5 @@
 package com.epam.hw_4.controller.dto;
 
-
 import com.epam.hw_4.model.enums.BookOption;
 import com.epam.hw_4.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -20,22 +19,15 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderDTO {
 
-    public long id;
+  public long id;
 
-    @NotBlank
-    public UserDTO user;
+  @NotBlank public UserDTO user;
 
-    @NotNull
-    public List<BookDTO> orderBooks;
+  @NotNull public List<BookDTO> orderBooks;
 
-    @NotNull
-    public BookOption bookOption;
+  @NotNull public BookOption bookOption;
 
-    @NotNull
-    public OrderStatus orderStatus;
+  @NotNull public OrderStatus orderStatus;
 
-    @Future
-    public Date arrivalDate;
-
-
+  @Future public Date arrivalDate;
 }

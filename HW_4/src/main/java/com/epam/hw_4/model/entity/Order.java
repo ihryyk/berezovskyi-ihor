@@ -1,6 +1,5 @@
 package com.epam.hw_4.model.entity;
 
-
 import com.epam.hw_4.model.enums.BookOption;
 import com.epam.hw_4.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -17,16 +16,15 @@ import java.util.List;
 @NoArgsConstructor
 public class Order {
 
-    private long id;
+  private long id;
 
-    private User user;
+  private User user;
 
-    private List<Book> orderBooks;
+  private List<Book> orderBooks;
 
-    private BookOption bookOption;
+  private BookOption bookOption;
 
-    private OrderStatus orderStatus;
+  private OrderStatus orderStatus;
 
-    private Date arrivalDate;
-
+  private Date arrivalDate;
 }

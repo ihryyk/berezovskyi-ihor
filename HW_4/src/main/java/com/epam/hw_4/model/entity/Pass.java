@@ -1,6 +1,5 @@
 package com.epam.hw_4.model.entity;
 
-
 import com.epam.hw_4.model.enums.PassStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,16 +14,15 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Pass {
 
-    private long id;
+  private long id;
 
-    private Date startDate;
+  private Date startDate;
 
-    private Date endDate;
+  private Date endDate;
 
-    private PassStatus passStatus;
+  private PassStatus passStatus;
 
-    private int penalty;
+  private int penalty;
 
-    private Order order;
-
+  private Order order;
 }

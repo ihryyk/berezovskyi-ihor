@@ -11,6 +11,10 @@ public class App {
     AnnotationConfigApplicationContext context =
         new AnnotationConfigApplicationContext(Config2.class);
     System.out.println(Arrays.asList(context.getBeanDefinitionNames()));
+    for (String beanDefinitionName : context.getBeanDefinitionNames()) {
+      System.out.println(beanDefinitionName);
+      System.out.println(context.getBeanDefinition(beanDefinitionName));
+    }
     context.getBean("beanF", BeanF.class);
     context.close();
   }

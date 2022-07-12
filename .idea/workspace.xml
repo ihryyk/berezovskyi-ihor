@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d54e86c8-04d8-40be-a9a0-6a732bf8cb99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HW_5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/Hw5Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/LibrarianController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/PassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/Validation/UserNameValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/Validation/ValidUserName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/dto/BookDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/dto/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/dto/PassDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/mapper/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/mapper/PassMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/controller/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/entity/Pass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/enums/BookOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/enums/LockStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/enums/PassStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/model/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/JdbcLibrarianRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/LibrarianRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/PassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/repository/impl/JdbcLibrarianRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/LibrarianService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/PassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/exeption/ControllerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/exeption/HandlerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/exeption/RepositoryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/exeption/ServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/impl/LibrarianServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/impl/PassServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/java/com/epam/hw_5/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5/src/test/java/com/epam/hw_5/Hw5ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_2/src/main/java/org/spring/homeWork2/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/HW_2/src/main/java/org/spring/homeWork2/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_2/src/main/java/org/spring/homeWork2/configurations/Config2.java" beforeDir="false" afterPath="$PROJECT_DIR$/HW_2/src/main/java/org/spring/homeWork2/configurations/Config2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_2/src/test/java/org/spring/homeWork2/AppTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HW_5" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2BaH5x82LOMNGu59veOO3eTq5T5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-18" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DEMO-master" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="google-java-format.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Laba Epum\berezovskyi-ihor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Laba Epum\berezovskyi-ihor\HW_5\src\main\java\com\epam\hw_5" />
+      <recent name="D:\Laba Epum\berezovskyi-ihor" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.spring.homeWork2.App" />
+      <module name="HW_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.spring.homeWork2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.epam.spring.homework1.Main" />
+      <module name="HW_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.spring.homework1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sprinng.hw_3.Hw3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw4Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="HW_4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.epam.hw_4.Hw4Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HW_5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.epam.hw_5.Hw5Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Spring Boot.Hw4Application" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Spring Boot.Hw4Application" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d54e86c8-04d8-40be-a9a0-6a732bf8cb99" name="Changes" comment="" />
+      <created>1657137096544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657137096544</updated>
+      <workItem from="1657137097673" duration="886000" />
+      <workItem from="1657138266914" duration="7571000" />
+      <workItem from="1657173405253" duration="505000" />
+      <workItem from="1657210244133" duration="203000" />
+      <workItem from="1657211031052" duration="1021000" />
+      <workItem from="1657283580846" duration="737000" />
+      <workItem from="1657284385294" duration="1875000" />
+      <workItem from="1657382404797" duration="478000" />
+      <workItem from="1657382940357" duration="2426000" />
+      <workItem from="1657469486696" duration="507000" />
+      <workItem from="1657470074533" duration="7478000" />
+      <workItem from="1657529432748" duration="10502000" />
+      <workItem from="1657621612139" duration="9175000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../berezovskyi-ihor/HW_3/src/main/java/com/sprinng/hw_3/controller/mapper/OrderMapper.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

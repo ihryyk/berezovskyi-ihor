@@ -8,7 +8,7 @@ import com.epam.hw_4.model.entity.Pass;
 import com.epam.hw_4.model.enums.PassStatus;
 import com.epam.hw_4.service.PassService;
 import com.epam.hw_4.service.exeption.ServiceException;
-import com.epam.hw_4.service.repository.PassRepository;
+import com.epam.hw_4.repository.PassRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

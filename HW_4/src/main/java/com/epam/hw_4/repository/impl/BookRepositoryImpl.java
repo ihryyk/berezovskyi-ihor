@@ -1,8 +1,9 @@
-package com.epam.hw_4.service.repository.impl;
+package com.epam.hw_4.repository.impl;
 
 import com.epam.hw_4.model.entity.Book;
+import com.epam.hw_4.repository.BookRepository;
 import com.epam.hw_4.service.exeption.RepositoryException;
-import com.epam.hw_4.service.repository.BookRepository;
+import com.epam.hw_4.service.exeption.ServiceException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -47,4 +48,9 @@ public class BookRepositoryImpl implements BookRepository {
 
   @Override
   public void add(Book book) throws RepositoryException {}
+
+  @Override
+  public List<Book> sortBooks(String sortBy) throws ServiceException {
+    return null;
+  }
 }

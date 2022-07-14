@@ -1,8 +1,9 @@
-package com.epam.hw_4.service.repository.impl;
+package com.epam.hw_4.repository.impl;
 
 import com.epam.hw_4.model.entity.User;
+import com.epam.hw_4.model.enums.LockStatus;
+import com.epam.hw_4.repository.UserRepository;
 import com.epam.hw_4.service.exeption.RepositoryException;
-import com.epam.hw_4.service.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -38,7 +39,7 @@ public class UserRepositoryImpl implements UserRepository {
   }
 
   @Override
-  public void changeLockStatus(long userId, boolean lockStatus) throws RepositoryException {}
+  public void changeLockStatus(long userId, LockStatus lockStatus) throws RepositoryException {}
 
   @Override
   public void delete(String email) throws RepositoryException {}

@@ -6,7 +6,7 @@ import com.epam.hw_4.model.entity.Order;
 import com.epam.hw_4.model.enums.OrderStatus;
 import com.epam.hw_4.service.OrderService;
 import com.epam.hw_4.service.exeption.ServiceException;
-import com.epam.hw_4.service.repository.OrderRepository;
+import com.epam.hw_4.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

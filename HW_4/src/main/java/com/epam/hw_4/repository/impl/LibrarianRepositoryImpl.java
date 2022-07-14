@@ -1,8 +1,8 @@
-package com.epam.hw_4.service.repository.impl;
+package com.epam.hw_4.repository.impl;
 
 import com.epam.hw_4.model.entity.User;
+import com.epam.hw_4.repository.LibrarianRepository;
 import com.epam.hw_4.service.exeption.RepositoryException;
-import com.epam.hw_4.service.repository.LibrarianRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

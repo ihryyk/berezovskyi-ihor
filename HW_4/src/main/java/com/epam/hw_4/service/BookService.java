@@ -21,4 +21,6 @@ public interface BookService {
   public void delete(long id) throws ServiceException;
 
   public void add(BookDTO bookDTO) throws ServiceException;
+
+  List<BookDTO> sortBooks(String sortBy) throws ServiceException;
 }

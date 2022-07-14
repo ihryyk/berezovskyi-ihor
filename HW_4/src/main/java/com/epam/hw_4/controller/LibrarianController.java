@@ -1,4 +1,4 @@
-package com.epam.hw_4.controller;
+package com.epam.hw45.controller;
 
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.service.LibrarianService;
@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController()
+@RestController
 @RequiredArgsConstructor
 @Slf4j
+@RequestMapping("/librarian")
 public class LibrarianController {
   private final LibrarianService librarianService;
 
   @ResponseStatus(HttpStatus.CREATED)
-  @PostMapping(value = "/librarian")
+  @PostMapping
   public void createLibrarian(@RequestBody UserDTO librarian) {
     try {
       log.info("create librarian with email {}", librarian.getEmailAddress());
@@ -29,7 +30,7 @@ public class LibrarianController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/librarian")
+  @GetMapping
   public List<UserDTO> getAllLibrarians() {
     try {
       log.info("get all librarians");

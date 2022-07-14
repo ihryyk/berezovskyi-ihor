@@ -5,7 +5,7 @@ import com.epam.hw_4.controller.mapper.BookMapper;
 import com.epam.hw_4.model.entity.Book;
 import com.epam.hw_4.service.BookService;
 import com.epam.hw_4.service.exeption.ServiceException;
-import com.epam.hw_4.service.repository.BookRepository;
+import com.epam.hw_4.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,9 +22,7 @@ public class BookServiceImpl implements BookService {
 
   @Override
   public BookDTO getById(long id) throws ServiceException {
-
     Book book = bookRepository.getById(id);
-
     if (book == null) {
       throw new ServiceException(format("Book with id %o not found", id));
     }
@@ -74,5 +72,10 @@ public class BookServiceImpl implements BookService {
     Book book = BookMapper.INSTANCE.mapToEntity(bookDTT);
     log.info("create new book with title {}", book.getTitle());
     bookRepository.add(book);
+  }
+
+  @Override
+  public List<BookDTO> sortBooks(String sortBy) throws ServiceException {
+    return bookRepository.sortBooks(sortBy).stream().map(BookMapper.INSTANCE::mapToDto).toList();
   }
 }

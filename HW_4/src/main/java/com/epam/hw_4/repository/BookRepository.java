@@ -1,7 +1,8 @@
-package com.epam.hw_4.service.repository;
+package com.epam.hw_4.repository;
 
 import com.epam.hw_4.model.entity.Book;
 import com.epam.hw_4.service.exeption.RepositoryException;
+import com.epam.hw_4.service.exeption.ServiceException;
 
 import java.util.List;
 
@@ -22,4 +23,6 @@ public interface BookRepository {
   public void delete(long id) throws RepositoryException;
 
   public void add(Book book) throws RepositoryException;
+
+  public List<Book> sortBooks(String sortBy) throws ServiceException;
 }

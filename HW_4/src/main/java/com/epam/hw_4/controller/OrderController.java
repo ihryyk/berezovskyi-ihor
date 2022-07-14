@@ -1,4 +1,4 @@
-package com.epam.hw_4.controller;
+package com.epam.hw45.controller;
 
 import com.epam.hw_4.controller.dto.OrderDTO;
 import com.epam.hw_4.model.enums.OrderStatus;
@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController()
+@RestController
 @RequiredArgsConstructor
 @Slf4j
+@RequestMapping("/order")
 public class OrderController {
   private final OrderService orderService;
 
   @ResponseStatus(HttpStatus.OK)
-  @PutMapping(value = "/order")
+  @PutMapping
   public void updateOrder(@RequestBody OrderDTO orderDTO) {
     try {
       log.info("update order");
@@ -30,8 +31,8 @@ public class OrderController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/order/{userId}")
-  public List<OrderDTO> getOrdersByUserId(@PathVariable long userId) throws ServiceException {
+  @GetMapping(params = "userId")
+  public List<OrderDTO> getOrdersByUserId(@RequestParam(name = "userId") long userId) {
     try {
       log.info("get all orders by user id {}", userId);
       return orderService.getAllByUserId(userId);
@@ -41,8 +42,8 @@ public class OrderController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/order/{id}")
-  public OrderDTO getOrdersById(@PathVariable long id) throws ServiceException {
+  @GetMapping(value = "{id}")
+  public OrderDTO getOrdersById(@PathVariable long id) {
     try {
       log.info("get order by id {}", id);
       return orderService.getById(id);
@@ -52,8 +53,8 @@ public class OrderController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/order/")
-  public List<OrderDTO> getAllOrders() throws ServiceException {
+  @GetMapping
+  public List<OrderDTO> getAllOrders() {
     try {
       log.info("get all orders ");
       return orderService.getAll();
@@ -63,8 +64,8 @@ public class OrderController {
   }
 
   @ResponseStatus(HttpStatus.CREATED)
-  @PostMapping(value = "/order")
-  public void createBook(@RequestBody OrderDTO orderDTO) throws ServiceException {
+  @PostMapping
+  public void createBook(@RequestBody OrderDTO orderDTO) {
     try {
       log.info("create new order");
       orderService.create(orderDTO);
@@ -74,7 +75,7 @@ public class OrderController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @PatchMapping(value = "/order/{id}")
+  @PatchMapping(value = "{id}")
   public void changeOrderStatus(@PathVariable long id, @RequestBody OrderStatus orderStatus) {
     try {
       log.info("change order status to {} in order with id {}", orderStatus, id);

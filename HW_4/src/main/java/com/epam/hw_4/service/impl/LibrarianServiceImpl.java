@@ -5,7 +5,7 @@ import com.epam.hw_4.controller.mapper.UserMapper;
 import com.epam.hw_4.model.entity.User;
 import com.epam.hw_4.service.LibrarianService;
 import com.epam.hw_4.service.exeption.ServiceException;
-import com.epam.hw_4.service.repository.LibrarianRepository;
+import com.epam.hw_4.repository.LibrarianRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

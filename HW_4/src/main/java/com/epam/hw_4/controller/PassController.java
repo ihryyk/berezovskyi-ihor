@@ -1,4 +1,4 @@
-package com.epam.hw_4.controller;
+package com.epam.hw45.controller;
 
 import com.epam.hw_4.controller.dto.BookDTO;
 import com.epam.hw_4.controller.dto.PassDTO;
@@ -13,16 +13,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController()
-@Slf4j
+@RestController
 @RequiredArgsConstructor
+@Slf4j
+@RequestMapping("/pass")
 public class PassController {
 
   private final PassService passService;
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/pass/")
-  public List<PassDTO> getAllPasses() throws ServiceException {
+  @GetMapping
+  public List<PassDTO> getAllPasses() {
     try {
       log.info("get all passes");
       return passService.getAll();
@@ -32,19 +33,19 @@ public class PassController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/pass/{userId}")
-  public List<PassDTO> getPassesByUserId(@PathVariable long id) throws ServiceException {
+  @GetMapping(params = "userId")
+  public List<PassDTO> getPassesByUserId(@RequestParam(name = "userId") long userId) {
     try {
-      log.info("get all passes by user id {}", id);
-      return passService.getAllByUserId(id);
+      log.info("get all passes by user id {}", userId);
+      return passService.getAllByUserId(userId);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/pass/{id}/books")
-  public List<BookDTO> getBooksFromPassByPassId(@PathVariable long id) throws ServiceException {
+  @GetMapping(value = "{id}/books")
+  public List<BookDTO> getBooksFromPassByPassId(@PathVariable long id) {
     try {
       log.info("get books from pass by pass id {}", id);
       return passService.getBooksById(id);
@@ -54,8 +55,8 @@ public class PassController {
   }
 
   @ResponseStatus(HttpStatus.CREATED)
-  @PostMapping(value = "/pass")
-  public void createPass(@RequestBody PassDTO passDTO) throws ServiceException {
+  @PostMapping
+  public void createPass(@RequestBody PassDTO passDTO) {
     try {
       log.info("create new pass");
       passService.create(passDTO);
@@ -65,8 +66,8 @@ public class PassController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @PutMapping(value = "/pass")
-  public void updatePass(@RequestBody PassDTO passDTO) throws ServiceException {
+  @PutMapping
+  public void updatePass(@RequestBody PassDTO passDTO) {
     try {
       log.info("update pass");
       passService.update(passDTO);
@@ -76,7 +77,7 @@ public class PassController {
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @PatchMapping(value = "/pass/{id}")
+  @PatchMapping(value = "{id}")
   public void changePassStatus(@PathVariable long id, PassStatus passStatus) {
     try {
       log.info("change pass status to {} in pass with id {}", passStatus, id);

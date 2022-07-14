@@ -1,4 +1,4 @@
-package com.epam.hw_4.service.repository;
+package com.epam.hw_4.repository;
 
 import com.epam.hw_4.model.entity.Order;
 import com.epam.hw_4.model.enums.OrderStatus;

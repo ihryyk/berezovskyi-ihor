@@ -3,10 +3,11 @@ package com.epam.hw_4.service.impl;
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.controller.mapper.UserMapper;
 import com.epam.hw_4.model.entity.User;
+import com.epam.hw_4.model.enums.LockStatus;
 import com.epam.hw_4.service.UserService;
 import com.epam.hw_4.service.exeption.RepositoryException;
 import com.epam.hw_4.service.exeption.ServiceException;
-import com.epam.hw_4.service.repository.UserRepository;
+import com.epam.hw_4.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -69,7 +70,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public void changeLockStatus(long id, boolean lockStatus) throws ServiceException {
+  public void changeLockStatus(long id, LockStatus lockStatus) throws ServiceException {
     log.info("change lock status to {} in user with id {}", lockStatus, id);
     userRepository.changeLockStatus(id, lockStatus);
   }

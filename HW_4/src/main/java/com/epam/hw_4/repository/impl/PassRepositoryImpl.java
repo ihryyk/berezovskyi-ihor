@@ -1,10 +1,10 @@
-package com.epam.hw_4.service.repository.impl;
+package com.epam.hw_4.repository.impl;
 
 import com.epam.hw_4.model.entity.Book;
 import com.epam.hw_4.model.entity.Pass;
 import com.epam.hw_4.model.enums.PassStatus;
+import com.epam.hw_4.repository.PassRepository;
 import com.epam.hw_4.service.exeption.RepositoryException;
-import com.epam.hw_4.service.repository.PassRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

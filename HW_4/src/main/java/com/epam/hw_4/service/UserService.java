@@ -1,6 +1,7 @@
 package com.epam.hw_4.service;
 
 import com.epam.hw_4.controller.dto.UserDTO;
+import com.epam.hw_4.model.enums.LockStatus;
 import com.epam.hw_4.service.exeption.ServiceException;
 
 import java.util.List;
@@ -16,7 +17,8 @@ public interface UserService {
 
   public List<UserDTO> getAll() throws ServiceException;
 
-  public void changeLockStatus(long userId, boolean lockStatus) throws ServiceException;
+  public void changeLockStatus(long userId, LockStatus lockStatus) throws ServiceException;
 
   public void delete(String email) throws ServiceException;
+
 }

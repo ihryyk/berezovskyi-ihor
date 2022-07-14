@@ -6,7 +6,7 @@ import com.sprinng.hw_3.model.entity.User;
 import com.sprinng.hw_3.service.UserService;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;
 import com.sprinng.hw_3.service.exeption.ServiceException;
-import com.sprinng.hw_3.service.repository.UserRepository;
+import com.sprinng.hw_3.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

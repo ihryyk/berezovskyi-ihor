@@ -5,7 +5,7 @@ import com.sprinng.hw_3.controller.mapper.BookMapper;
 import com.sprinng.hw_3.model.entity.Book;
 import com.sprinng.hw_3.service.BookService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
-import com.sprinng.hw_3.service.repository.BookRepository;
+import com.sprinng.hw_3.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

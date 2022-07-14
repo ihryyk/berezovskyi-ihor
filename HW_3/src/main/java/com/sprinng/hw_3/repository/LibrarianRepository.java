@@ -1,4 +1,4 @@
-package com.sprinng.hw_3.service.repository;
+package com.sprinng.hw_3.repository;
 
 import com.sprinng.hw_3.model.entity.User;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;

@@ -1,10 +1,10 @@
-package com.sprinng.hw_3.service.repository.impl;
+package com.sprinng.hw_3.repository.impl;
 
 import com.sprinng.hw_3.model.entity.Book;
 import com.sprinng.hw_3.model.entity.Pass;
 import com.sprinng.hw_3.model.enums.PassStatus;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;
-import com.sprinng.hw_3.service.repository.PassRepository;
+import com.sprinng.hw_3.repository.PassRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

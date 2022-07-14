@@ -1,9 +1,9 @@
-package com.sprinng.hw_3.service.repository.impl;
+package com.sprinng.hw_3.repository.impl;
 
 import com.sprinng.hw_3.model.entity.Order;
 import com.sprinng.hw_3.model.enums.OrderStatus;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;
-import com.sprinng.hw_3.service.repository.OrderRepository;
+import com.sprinng.hw_3.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

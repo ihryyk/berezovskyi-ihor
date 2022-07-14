@@ -1,4 +1,4 @@
-package com.sprinng.hw_3.service.repository;
+package com.sprinng.hw_3.repository;
 
 import com.sprinng.hw_3.model.entity.Order;
 import com.sprinng.hw_3.model.enums.OrderStatus;

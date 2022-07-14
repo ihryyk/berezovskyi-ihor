@@ -1,8 +1,8 @@
-package com.sprinng.hw_3.service.repository.impl;
+package com.sprinng.hw_3.repository.impl;
 
 import com.sprinng.hw_3.model.entity.User;
 import com.sprinng.hw_3.service.exeption.RepositoryExeption;
-import com.sprinng.hw_3.service.repository.LibrarianRepository;
+import com.sprinng.hw_3.repository.LibrarianRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

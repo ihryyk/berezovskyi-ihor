@@ -10,21 +10,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController()
+@RestController
 @RequiredArgsConstructor
 @Slf4j
+@RequestMapping("/librarian")
 public class LibrarianController {
   private final LibrarianService librarianService;
 
   @ResponseStatus(HttpStatus.CREATED)
-  @PostMapping(value = "/librarian")
+  @PostMapping
   public void createLibrarian(@RequestBody UserDTO librarian) throws ServiceException {
     log.info("create librarian with email {}", librarian.getEmailAddress());
     librarianService.create(librarian);
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/librarian")
+  @GetMapping
   public List<UserDTO> getAllLibrarians() throws ServiceException {
     log.info("get all librarians");
     return librarianService.getAll();

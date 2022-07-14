@@ -8,7 +8,7 @@ import com.sprinng.hw_3.model.entity.Pass;
 import com.sprinng.hw_3.model.enums.PassStatus;
 import com.sprinng.hw_3.service.PassService;
 import com.sprinng.hw_3.service.exeption.ServiceException;
-import com.sprinng.hw_3.service.repository.PassRepository;
+import com.sprinng.hw_3.repository.PassRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

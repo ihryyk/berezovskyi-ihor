@@ -10,48 +10,49 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Slf4j
-@RestController()
+@RestController
 @RequiredArgsConstructor
+@Slf4j
+@RequestMapping("/user")
 public class UserController {
   private final UserService userService;
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/user/{email}")
+  @GetMapping(value = "{email}")
   public UserDTO getUser(@PathVariable String email) throws ServiceException {
     log.info("get user by email{}", email);
     return userService.getByEmail(email);
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @GetMapping(value = "/user")
+  @GetMapping
   public List<UserDTO> getAllUsers() throws ServiceException {
     log.info("get all users");
     return userService.getAll();
   }
 
   @ResponseStatus(HttpStatus.CREATED)
-  @PostMapping(value = "/user")
+  @PostMapping
   public void createUser(@RequestBody UserDTO userDTO) throws ServiceException {
     log.info("add new user with email {}", userDTO.getEmailAddress());
     userService.add(userDTO);
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @PutMapping(value = "/user")
+  @PutMapping
   public void updateUser(@RequestBody UserDTO userDTO) throws ServiceException {
     log.info("update user with email {}", userDTO.getEmailAddress());
     userService.update(userDTO);
   }
 
-  @DeleteMapping(value = "/user/{email}")
+  @DeleteMapping(value = "{email}")
   public void deleteUser(@PathVariable String email) throws ServiceException {
     log.info("delete User with email {}", email);
     userService.delete(email);
   }
 
   @ResponseStatus(HttpStatus.OK)
-  @PatchMapping(value = "/user/{id}")
+  @PatchMapping(value = "{id}")
   public void changeLockStatus(@PathVariable long id, @RequestBody boolean lockStatus)
       throws ServiceException {
     log.info("change lock status to {} in user with id {}", lockStatus, id);

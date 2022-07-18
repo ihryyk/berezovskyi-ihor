@@ -21,7 +21,6 @@ import static java.lang.String.format;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-@Transactional
 public class UserServiceImpl implements UserService {
 
   private final UserRepository userRepository;
@@ -34,7 +33,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public UserDTO getByEmailAndPassword(String email, String password) throws RepositoryException {
     Optional<User> user = userRepository.findUserByEmailAddressAndPassword(email, password);
     if (user.isPresent()) {
@@ -46,7 +45,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public UserDTO getByEmail(String email) throws RepositoryException {
     try {
       Optional<User> user = userRepository.findUserByEmailAddress(email);
@@ -61,14 +60,21 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<UserDTO> getAll() {
     log.info("get all users");
     return userRepository.findAll().stream().map(UserMapper.INSTANCE::mapToDto).toList();
   }
 
   @Override
+  @Transactional
   public void changeLockStatus(long id, LockStatus lockStatus) throws RepositoryException {
+    User user =
+        userRepository
+            .findById(id)
+            .orElseThrow(() -> new RepositoryException("User with id " + id + " not found"));
+    user.setLockStatus(lockStatus);
+    userRepository.save(user);
     log.info("change lock status to {} in user with id {}", lockStatus, id);
   }
 

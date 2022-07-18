@@ -20,12 +20,12 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-@Transactional
 public class PassServiceImpl implements PassService {
 
   private final PassRepository passRepository;
 
   @Override
+  @Transactional
   public void changePassStatus(long id, PassStatus passStatus) throws RepositoryException {
     log.info("change pass status to {} in pass with id {}", passStatus, id);
     Pass pass =
@@ -37,7 +37,7 @@ public class PassServiceImpl implements PassService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<BookDTO> getBooksById(long id) throws ServiceException {
     log.info("get books from pass by pass id {}", id);
     Pass pass =
@@ -48,14 +48,14 @@ public class PassServiceImpl implements PassService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<PassDTO> getAll() {
     log.info("get all passes");
     return passRepository.findAll().stream().map(PassMapper.INSTANCE::mapToDto).toList();
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<PassDTO> getAllByUserId(long userID) {
     log.info("get all passes by user id {}", userID);
     return passRepository.getAllByUserId(userID).stream()
@@ -71,6 +71,7 @@ public class PassServiceImpl implements PassService {
   }
 
   @Override
+  @Transactional
   public void updatePenalty(long id, int penalty) throws RepositoryException {
     Pass pass =
         passRepository

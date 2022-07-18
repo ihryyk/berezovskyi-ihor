@@ -20,13 +20,12 @@ import java.util.List;
 @Service
 @Slf4j
 @AllArgsConstructor
-@Transactional
 public class BookServiceImpl implements BookService {
 
   private final BookRepository bookRepository;
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public BookDTO getById(long id) throws ServiceException {
 
     Book book =
@@ -37,8 +36,8 @@ public class BookServiceImpl implements BookService {
     return BookMapper.INSTANCE.mapToDto(book);
   }
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public List<BookDTO> getByAuthor(String author, int page, int size) {
     log.info("get books by author {}", author);
     Pageable pageable = PageRequest.of(page, size);
@@ -47,16 +46,16 @@ public class BookServiceImpl implements BookService {
         .toList();
   }
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public List<BookDTO> getAll(int page, int size) {
     log.info("get all books");
     Pageable pageable = PageRequest.of(page, size);
     return bookRepository.findAll(pageable).stream().map(BookMapper.INSTANCE::mapToDto).toList();
   }
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public List<BookDTO> getByTitle(String title, int page, int size) {
     log.info("get books by title {}", title);
     Pageable pageable = PageRequest.of(page, size);
@@ -79,6 +78,7 @@ public class BookServiceImpl implements BookService {
   }
 
   @Override
+  @Transactional
   public void delete(long id) throws ServiceException {
     Book book =
         bookRepository
@@ -88,8 +88,8 @@ public class BookServiceImpl implements BookService {
     log.info("delete book by id {}", id);
   }
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public List<BookDTO> sortBooks(String sortBy, int size, int page) {
     Pageable sortedBy = PageRequest.of(page, size, Sort.by(sortBy));
     return bookRepository.findAll(sortedBy).stream().map(BookMapper.INSTANCE::mapToDto).toList();

@@ -19,7 +19,6 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-@Transactional
 public class OrderServiceImpl implements OrderService {
 
   private final OrderRepository orderRepository;
@@ -33,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<OrderDTO> getAllByUserId(long userId) throws RepositoryException {
     log.info("get all orders by user id {}", userId);
     User user =
@@ -57,7 +56,7 @@ public class OrderServiceImpl implements OrderService {
   }
 
   @Override
-  @Transactional
+  @Transactional(readOnly = true)
   public List<OrderDTO> getAll() {
     log.info("get all orders ");
     return orderRepository.findAll().stream().map(OrderMapper.INSTANCE::mapToDto).toList();
@@ -71,6 +70,7 @@ public class OrderServiceImpl implements OrderService {
   }
 
   @Override
+  @Transactional
   public void changeOrderStatus(long id, OrderStatus orderStatus) throws RepositoryException {
     Order order =
         orderRepository

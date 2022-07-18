@@ -15,7 +15,6 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-@Transactional
 public class LibrarianServiceImpl implements LibrarianService {
 
   private final JdbcLibrarianRepository librarianRepository;
@@ -27,8 +26,8 @@ public class LibrarianServiceImpl implements LibrarianService {
     log.info("create librarian with email {}", librarian.getEmailAddress());
   }
 
-  @Transactional(readOnly = true)
   @Override
+  @Transactional(readOnly = true)
   public List<UserDTO> getAll() {
     log.info("get all librarians");
     return librarianRepository.getAll().stream().map(UserMapper.INSTANCE::mapToDto).toList();

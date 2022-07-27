@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Positive;
-import java.sql.Date;
+import java.util.Date;
 
 @Builder
 @Data
@@ -19,13 +19,13 @@ public class PassDTO {
 
   public long id;
 
-  @Future public Date startDate;
+  @NotNull @Future public Date startDate;
 
-  @Future public Date endDate;
+  @NotNull @Future public Date endDate;
 
   @NotNull public PassStatus passStatus;
 
-  @Positive public int penalty;
+  @NotNull @Positive public int penalty;
 
   @NotNull public OrderDTO order;
 }

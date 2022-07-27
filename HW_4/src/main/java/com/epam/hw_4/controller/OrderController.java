@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,7 +22,7 @@ public class OrderController {
 
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
-  public void updateOrder(@RequestBody OrderDTO orderDTO) {
+  public void updateOrder(@RequestBody @Valid OrderDTO orderDTO) {
     try {
       log.info("update order");
       orderService.update(orderDTO);
@@ -65,7 +66,7 @@ public class OrderController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createBook(@RequestBody OrderDTO orderDTO) {
+  public void createOrder(@RequestBody @Valid OrderDTO orderDTO) {
     try {
       log.info("create new order");
       orderService.create(orderDTO);

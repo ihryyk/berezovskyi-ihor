@@ -10,7 +10,7 @@ import java.util.List;
 public interface PassService {
   public void changePassStatus(long passId, PassStatus passStatus) throws ServiceException;
 
-  public List<BookDTO> getBooksById(long passId) throws ServiceException;
+  public List<BookDTO> getBooksByPassId(long passId) throws ServiceException;
 
   public void create(PassDTO passDTO) throws ServiceException;
 

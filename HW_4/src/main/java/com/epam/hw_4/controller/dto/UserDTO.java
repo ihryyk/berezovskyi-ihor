@@ -1,8 +1,8 @@
 package com.epam.hw_4.controller.dto;
 
 import com.epam.hw_4.controller.Validation.UserNameValidation;
-import com.epam.hw_4.model.entity.Role;
 import com.epam.hw_4.model.enums.LockStatus;
+import com.epam.hw_4.model.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,9 +21,9 @@ public class UserDTO {
 
   public long id;
 
-  @UserNameValidation public String name;
+  @NotNull @UserNameValidation public String name;
 
-  @NotBlank @Email public String emailAddress;
+  @NotNull @NotBlank @Email public String emailAddress;
 
   @NotNull
   @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")

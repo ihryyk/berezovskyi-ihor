@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -48,7 +49,7 @@ public class PassController {
   public List<BookDTO> getBooksFromPassByPassId(@PathVariable long id) {
     try {
       log.info("get books from pass by pass id {}", id);
-      return passService.getBooksById(id);
+      return passService.getBooksByPassId(id);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }
@@ -56,7 +57,7 @@ public class PassController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createPass(@RequestBody PassDTO passDTO) {
+  public void createPass(@RequestBody @Valid PassDTO passDTO) {
     try {
       log.info("create new pass");
       passService.create(passDTO);
@@ -67,7 +68,7 @@ public class PassController {
 
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
-  public void updatePass(@RequestBody PassDTO passDTO) {
+  public void updatePass(@RequestBody @Valid PassDTO passDTO) {
     try {
       log.info("update pass");
       passService.update(passDTO);

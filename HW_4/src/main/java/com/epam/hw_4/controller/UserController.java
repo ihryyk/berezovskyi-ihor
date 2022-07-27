@@ -1,4 +1,4 @@
-package com.epam.hw45.controller;
+package com.epam.hw_4.controller;
 
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.model.enums.LockStatus;
@@ -44,7 +44,7 @@ public class UserController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createUser(@Valid @RequestBody UserDTO userDTO) throws ControllerException {
+  public void createUser(@RequestBody @Valid  UserDTO userDTO) throws ControllerException {
     try {
       log.info("add new user with email {}", userDTO.getEmailAddress());
       userService.add(userDTO);
@@ -55,7 +55,7 @@ public class UserController {
 
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
-  public void updateUser(@Valid @RequestBody UserDTO userDTO) throws ControllerException {
+  public void updateUser(@RequestBody @Valid UserDTO userDTO) throws ControllerException {
     try {
       log.info("update user with email {}", userDTO.getEmailAddress());
       userService.update(userDTO);

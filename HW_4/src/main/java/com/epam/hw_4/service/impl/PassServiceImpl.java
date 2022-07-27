@@ -29,7 +29,7 @@ public class PassServiceImpl implements PassService {
   }
 
   @Override
-  public List<BookDTO> getBooksById(long id) throws ServiceException {
+  public List<BookDTO> getBooksByPassId(long id) throws ServiceException {
     log.info("get books from pass by pass id {}", id);
     return passRepository.getBooksById(id).stream().map(BookMapper.INSTANCE::mapToDto).toList();
   }

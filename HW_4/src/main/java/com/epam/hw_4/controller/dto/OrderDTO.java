@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.Future;
-import javax.validation.constraints.NotBlank;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Builder
@@ -21,7 +20,7 @@ public class OrderDTO {
 
   public long id;
 
-  @NotBlank public UserDTO user;
+  @NotNull public UserDTO user;
 
   @NotNull public List<BookDTO> orderBooks;
 
@@ -29,5 +28,5 @@ public class OrderDTO {
 
   @NotNull public OrderStatus orderStatus;
 
-  @Future public Date arrivalDate;
+  @NotNull @Future public Date arrivalDate;
 }

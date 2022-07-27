@@ -1,4 +1,4 @@
-package com.epam.hw45.controller;
+package com.epam.hw_4.controller;
 
 import com.epam.hw_4.controller.dto.UserDTO;
 import com.epam.hw_4.service.LibrarianService;
@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,7 @@ public class LibrarianController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createLibrarian(@RequestBody UserDTO librarian) {
+  public void createLibrarian(@RequestBody @Valid UserDTO librarian) {
     try {
       log.info("create librarian with email {}", librarian.getEmailAddress());
       librarianService.create(librarian);

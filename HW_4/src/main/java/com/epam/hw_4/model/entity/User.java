@@ -1,6 +1,7 @@
 package com.epam.hw_4.model.entity;
 
 import com.epam.hw_4.model.enums.LockStatus;
+import com.epam.hw_4.model.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

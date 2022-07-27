@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,13 +22,9 @@ public class OrderController {
 
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
-  public void updateOrder(@RequestBody OrderDTO orderDTO) {
-    try {
-      log.info("update order");
-      orderService.save(orderDTO);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+  public void updateOrder(@RequestBody @Valid OrderDTO orderDTO) {
+    log.info("update order");
+    orderService.save(orderDTO);
   }
 
   @ResponseStatus(HttpStatus.OK)
@@ -43,7 +40,7 @@ public class OrderController {
 
   @ResponseStatus(HttpStatus.OK)
   @GetMapping(value = "{id}")
-  public OrderDTO getOrdersById(@PathVariable long id) {
+  public OrderDTO getOrderById(@PathVariable long id) {
     try {
       log.info("get order by id {}", id);
       return orderService.getById(id);
@@ -55,20 +52,16 @@ public class OrderController {
   @ResponseStatus(HttpStatus.OK)
   @GetMapping
   public List<OrderDTO> getAllOrders() {
-    try {
-      log.info("get all orders ");
-      return orderService.getAll();
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get all orders ");
+    return orderService.getAll();
   }
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createBook(@RequestBody OrderDTO orderDTO) {
+  public void createOrder(@RequestBody @Valid OrderDTO orderDTO) {
     try {
       log.info("create new order");
-      orderService.create(orderDTO);
+      orderService.save(orderDTO);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }

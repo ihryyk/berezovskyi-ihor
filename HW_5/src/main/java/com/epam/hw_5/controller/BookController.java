@@ -41,12 +41,8 @@ public class BookController {
       @RequestParam(value = "author") String author,
       @RequestParam(defaultValue = "0") int page,
       @RequestParam(defaultValue = "5") int size) {
-    try {
-      log.info("get books by author {}", author);
-      return bookService.getByAuthor(author, page, size);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get books by author {}", author);
+    return bookService.getByAuthor(author, page, size);
   }
 
   @ApiOperation("Get books by title")
@@ -56,12 +52,19 @@ public class BookController {
       @RequestParam(value = "title") String title,
       @RequestParam(defaultValue = "0") int page,
       @RequestParam(defaultValue = "5") int size) {
-    try {
-      log.info("get books by title {}", title);
-      return bookService.getByTitle(title, page, size);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get books by title {}", title);
+    return bookService.getByTitle(title, page, size);
+  }
+
+  @ApiOperation("Sort books")
+  @ResponseStatus(HttpStatus.OK)
+  @GetMapping(params = "sortedBy")
+  public List<BookDTO> getSortedBooks(
+      @RequestParam(name = "sortedBy") String sortedBy,
+      @RequestParam(defaultValue = "0") int page,
+      @RequestParam(defaultValue = "5") int size) {
+    log.info("get all books");
+    return bookService.sortBooks(sortedBy, size, page);
   }
 
   @ApiOperation("Get all books")
@@ -69,24 +72,16 @@ public class BookController {
   @GetMapping
   public List<BookDTO> getAllBooks(
       @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "5") int size) {
-    try {
-      log.info("get all books");
-      return bookService.getAll(page, size);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get all books");
+    return bookService.getAll(page, size);
   }
 
   @ApiOperation("Update book")
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
   public void updateBook(@RequestBody @Valid BookDTO bookDTO) {
-    try {
-      log.info("update book with title {}", bookDTO.getTitle());
-      bookService.save(bookDTO);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("update book with title {}", bookDTO.getTitle());
+    bookService.save(bookDTO);
   }
 
   @ApiOperation("Delete book")
@@ -104,12 +99,8 @@ public class BookController {
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
   public void createBook(@RequestBody @Valid BookDTO bookDTO) {
-    try {
-      log.info("create new book with title {}", bookDTO.getTitle());
-      bookService.save(bookDTO);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("create new book with title {}", bookDTO.getTitle());
+    bookService.save(bookDTO);
   }
 
   @ApiOperation("Change number of book")
@@ -119,21 +110,6 @@ public class BookController {
     try {
       log.info("change the number of books to {}", number);
       bookService.changeNumber(id, number);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
-  }
-
-  @ApiOperation("Sort books")
-  @ResponseStatus(HttpStatus.OK)
-  @GetMapping(params = "sortedBy")
-  public List<BookDTO> getSortedBooks(
-      @RequestParam(defaultValue = "0") int page,
-      @RequestParam(defaultValue = "5") int size,
-      @RequestParam(name = "sortedBy") String sortedBy) {
-    try {
-      log.info("get all books");
-      return bookService.sortBooks(sortedBy, size, page);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }

@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -24,12 +25,8 @@ public class PassController {
   @ResponseStatus(HttpStatus.OK)
   @GetMapping
   public List<PassDTO> getAllPasses() {
-    try {
-      log.info("get all passes");
-      return passService.getAll();
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get all passes");
+    return passService.getAll();
   }
 
   @ResponseStatus(HttpStatus.OK)
@@ -48,7 +45,7 @@ public class PassController {
   public List<BookDTO> getBooksFromPassByPassId(@PathVariable long id) {
     try {
       log.info("get books from pass by pass id {}", id);
-      return passService.getBooksById(id);
+      return passService.getBooksByPassId(id);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }
@@ -56,29 +53,21 @@ public class PassController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createPass(@RequestBody PassDTO passDTO) {
-    try {
-      log.info("create new pass");
-      passService.save(passDTO);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+  public void createPass(@RequestBody @Valid PassDTO passDTO) {
+    log.info("create new pass");
+    passService.save(passDTO);
   }
 
   @ResponseStatus(HttpStatus.OK)
   @PutMapping
-  public void updatePass(@RequestBody PassDTO passDTO) {
-    try {
-      log.info("update pass");
-      passService.save(passDTO);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+  public void updatePass(@RequestBody @Valid PassDTO passDTO) {
+    log.info("update pass");
+    passService.save(passDTO);
   }
 
   @ResponseStatus(HttpStatus.OK)
   @PatchMapping(value = "{id}")
-  public void changePassStatus(@PathVariable long id, PassStatus passStatus) {
+  public void changePassStatus(@PathVariable long id, @RequestBody PassStatus passStatus) {
     try {
       log.info("change pass status to {} in pass with id {}", passStatus, id);
       passService.changePassStatus(id, passStatus);

@@ -20,4 +20,7 @@ public interface BookRepository extends PagingAndSortingRepository<Book, Long> {
   @Modifying
   @Query("update Book set number = ?2, id=?1")
   public void changeNumber(@Param("id") long id, @Param("number") int number);
+
+  @Query("update Book set deleted = true where id=?1")
+  public void setDeleteTrue(@Param("id") long id);
 }

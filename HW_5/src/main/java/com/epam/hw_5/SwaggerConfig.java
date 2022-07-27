@@ -22,7 +22,7 @@ public class SwaggerConfig {
   public Docket api() {
     return new Docket(DocumentationType.SWAGGER_2)
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.epam.hw_5.controller"))
+        .apis(RequestHandlerSelectors.basePackage("com.epam.com.epam.hw_6.controller"))
         .build();
   }
 

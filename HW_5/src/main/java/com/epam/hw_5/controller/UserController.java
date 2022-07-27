@@ -22,32 +22,24 @@ public class UserController {
 
   @ResponseStatus(HttpStatus.OK)
   @GetMapping(value = "{email}")
-  public UserDTO getUser(@PathVariable String email) throws ControllerException {
-    try {
-      log.info("get user by email{}", email);
-      return userService.getByEmail(email);
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+  public UserDTO getUser(@PathVariable String email) {
+    log.info("get user by email{}", email);
+    return userService.getByEmail(email);
   }
 
   @ResponseStatus(HttpStatus.OK)
   @GetMapping
   public List<UserDTO> getAllUsers() throws ControllerException {
-    try {
-      log.info("get all users");
-      return userService.getAll();
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
+    log.info("get all users");
+    return userService.getAll();
   }
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createUser(@Valid @RequestBody UserDTO userDTO) throws ControllerException {
+  public void createUser(@Valid @RequestBody UserDTO userDTO) {
     try {
       log.info("add new user with email {}", userDTO.getEmailAddress());
-      userService.save(userDTO);
+      userService.create(userDTO);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }
@@ -58,7 +50,7 @@ public class UserController {
   public void updateUser(@Valid @RequestBody UserDTO userDTO) throws ControllerException {
     try {
       log.info("update user with email {}", userDTO.getEmailAddress());
-      userService.save(userDTO);
+      userService.update(userDTO);
     } catch (ServiceException ex) {
       throw new ControllerException(ex.getMessage());
     }

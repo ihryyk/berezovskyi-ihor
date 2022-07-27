@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class HandlerException {
   @ExceptionHandler(ServiceException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
-  public Exception handleServiceException(ServiceException ex) {
+  public String handleServiceException(ServiceException ex) {
     log.error("ServiceException: exception {}", ex.getMessage(), ex);
-    return new Exception(ex.getMessage());
+    return ex.getMessage();
   }
 
   @ExceptionHandler(ControllerException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
-  public Exception handleControllerException(ControllerException ex) {
+  public String handleControllerException(ControllerException ex) {
     log.error("ControllerException: exception {}", ex.getMessage(), ex);
-    return new Exception(ex.getMessage());
+    return ex.getMessage();
   }
 
   @ExceptionHandler(RepositoryException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
-  public Exception handleRepositoryException(RepositoryException ex) {
+  public String handleRepositoryException(RepositoryException ex) {
     log.error("RepositoryException: exception {}", ex.getMessage(), ex);
-    return new Exception(ex.getMessage());
+    return ex.getMessage();
   }
 }

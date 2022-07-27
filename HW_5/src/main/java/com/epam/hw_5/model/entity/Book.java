@@ -19,20 +19,27 @@ public class Book {
 
   @Column(name = "deleted")
   boolean deleted;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "book_id")
   private long id;
+
   @Column(name = "year")
   private int year;
+
   @Column(name = "title")
   private String title;
+
   @Column(name = "author")
   private String author;
+
   @Column(name = "publishing_house")
   private String publishingHouse;
+
   @Column(name = "number")
   private int number;
+
   @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(
       name = "order_book",

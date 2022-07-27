@@ -21,9 +21,9 @@ public class UserDTO {
 
   public long id;
 
-  @UserNameValidation public String name;
+  @NotNull @UserNameValidation public String name;
 
-  @NotBlank @Email public String emailAddress;
+  @NotNull @NotBlank @Email public String emailAddress;
 
   @NotNull
   @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")

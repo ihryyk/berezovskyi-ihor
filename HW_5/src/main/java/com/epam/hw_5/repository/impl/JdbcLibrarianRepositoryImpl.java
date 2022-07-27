@@ -27,7 +27,7 @@ public class JdbcLibrarianRepositoryImpl implements JdbcLibrarianRepository {
   private final JdbcTemplate jdbcTemplate;
 
   @Override
-  public void save(User librarian) throws RepositoryException {
+  public User save(User librarian) throws RepositoryException {
     if (librarian.getId() == 0) {
       jdbcTemplate.update(
           INSERT_NEW_USER,
@@ -44,6 +44,7 @@ public class JdbcLibrarianRepositoryImpl implements JdbcLibrarianRepository {
           librarian.getEmailAddress(),
           librarian.getPassword());
     }
+      return librarian;
   }
 
   @Override

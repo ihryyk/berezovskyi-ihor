@@ -16,7 +16,7 @@ public interface BookService {
 
   public void changeNumber(long bookId, int newNumber) throws ServiceException;
 
-  public void save(BookDTO updatedBookDTO) throws ServiceException;
+  public BookDTO save(BookDTO updatedBookDTO) throws ServiceException;
 
   public void delete(long id) throws ServiceException;
 

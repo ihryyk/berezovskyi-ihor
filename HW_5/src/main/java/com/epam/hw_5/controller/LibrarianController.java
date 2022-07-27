@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,7 @@ public class LibrarianController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void createLibrarian(@RequestBody UserDTO librarian) {
+  public void createLibrarian(@RequestBody @Valid UserDTO librarian) {
     try {
       log.info("create librarian with email {}", librarian.getEmailAddress());
       librarianService.create(librarian);
@@ -32,11 +33,7 @@ public class LibrarianController {
   @ResponseStatus(HttpStatus.OK)
   @GetMapping
   public List<UserDTO> getAllLibrarians() {
-    try {
       log.info("get all librarians");
       return librarianService.getAll();
-    } catch (ServiceException ex) {
-      throw new ControllerException(ex.getMessage());
-    }
   }
 }

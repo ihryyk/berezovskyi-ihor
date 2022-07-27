@@ -26,10 +26,31 @@ public class UserServiceImpl implements UserService {
   private final UserRepository userRepository;
 
   @Override
-  public void save(UserDTO userDTO) {
-    log.info("save user with email {}", userDTO.getEmailAddress());
+  public UserDTO create(UserDTO userDTO) {
+    log.info("create user with email {}", userDTO.getEmailAddress());
     User user = UserMapper.INSTANCE.mapToEntity(userDTO);
-    userRepository.save(user);
+    Optional<User> existedUser = userRepository.findUserByEmailAddress(user.getEmailAddress());
+    if (existedUser.isPresent()) {
+      throw new ServiceException(
+          format("User with email %s is already exists", user.getEmailAddress()));
+    }
+    return UserMapper.INSTANCE.mapToDto(userRepository.save(user));
+  }
+
+  @Override
+  public UserDTO update(UserDTO userDTO) {
+    log.info("update user with email {}", userDTO.getEmailAddress());
+    User user = null;
+    try {
+      user =
+          userRepository
+              .findById(userDTO.id)
+              .orElseThrow(
+                  () -> new RepositoryException("User with id " + userDTO.id + " not found"));
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
+    return UserMapper.INSTANCE.mapToDto(userRepository.save(user));
   }
 
   @Override
@@ -37,11 +58,13 @@ public class UserServiceImpl implements UserService {
   public UserDTO getByEmailAndPassword(String email, String password) throws RepositoryException {
     Optional<User> user = userRepository.findUserByEmailAddressAndPassword(email, password);
     if (user.isPresent()) {
-      throw new RepositoryException(
+      log.info("get user by email{} and password {}", email, password);
+      return UserMapper.INSTANCE.mapToDto(user.get());
+    } else {
+      log.error("User with email{} and password {} don't exist", email, password);
+      throw new ServiceException(
           format("User with email %s and password %s not found", email, password));
     }
-    log.info("get user by email{} and password {}", email, password);
-    return UserMapper.INSTANCE.mapToDto(user.get());
   }
 
   @Override
@@ -51,11 +74,12 @@ public class UserServiceImpl implements UserService {
       Optional<User> user = userRepository.findUserByEmailAddress(email);
       log.info("get user by email{}", email);
       if (user.isPresent()) {
+        return UserMapper.INSTANCE.mapToDto(user.get());
+      } else {
         throw new RepositoryException(format("User with email %s not found", email));
       }
-      return UserMapper.INSTANCE.mapToDto(user.get());
     } catch (RepositoryException exception) {
-      throw new ServiceException();
+      throw new ServiceException(exception.getMessage());
     }
   }
 
@@ -69,18 +93,34 @@ public class UserServiceImpl implements UserService {
   @Override
   @Transactional
   public void changeLockStatus(long id, LockStatus lockStatus) throws RepositoryException {
-    User user =
-        userRepository
-            .findById(id)
-            .orElseThrow(() -> new RepositoryException("User with id " + id + " not found"));
-    user.setLockStatus(lockStatus);
+    User user = null;
+    try {
+      user =
+          userRepository
+              .findById(id)
+              .orElseThrow(() -> new RepositoryException("User with id " + id + " not found"));
+      user.setLockStatus(lockStatus);
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
     userRepository.save(user);
     log.info("change lock status to {} in user with id {}", lockStatus, id);
   }
 
   @Override
+  @Transactional
   public void delete(String email) {
+    User deletedUser = null;
+    try {
+      deletedUser =
+          userRepository
+              .findUserByEmailAddress(email)
+              .orElseThrow(
+                  () -> new RepositoryException("User with email " + email + " not found"));
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
     log.info("delete User with email {}", email);
-    userRepository.deleteByEmailAddress(email);
+    userRepository.delete(deletedUser);
   }
 }

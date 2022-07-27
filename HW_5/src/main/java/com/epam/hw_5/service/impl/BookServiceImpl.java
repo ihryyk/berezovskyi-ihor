@@ -27,12 +27,17 @@ public class BookServiceImpl implements BookService {
   @Override
   @Transactional(readOnly = true)
   public BookDTO getById(long id) throws ServiceException {
+    Book book = null;
+    try {
+      book =
+          bookRepository
+              .findById(id)
+              .orElseThrow(() -> new RepositoryException("Book with id " + id + " not found"));
+      log.info("get book by id {}", id);
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
 
-    Book book =
-        bookRepository
-            .findById(id)
-            .orElseThrow(() -> new RepositoryException("Book with id " + id + " not found"));
-    log.info("get book by id {}", id);
     return BookMapper.INSTANCE.mapToDto(book);
   }
 
@@ -66,25 +71,38 @@ public class BookServiceImpl implements BookService {
 
   @Override
   public void changeNumber(long id, int newNumber) {
-    log.info("change the number of books to {} with id {}", newNumber, id);
+    Book book = null;
+    try {
+      book =
+          bookRepository
+              .findById(id)
+              .orElseThrow(() -> new RepositoryException("Book with id " + id + " not found"));
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
     bookRepository.changeNumber(id, newNumber);
+    log.info("change the number of books to {} with id {}", newNumber, book.getId());
   }
 
   @Override
-  public void save(BookDTO updatedBookDTO) {
-    log.info("update book with title {}", updatedBookDTO.getTitle());
-    Book updatedBook = BookMapper.INSTANCE.mapToEntity(updatedBookDTO);
-    bookRepository.save(updatedBook);
+  public BookDTO save(BookDTO bookDTO) {
+    log.info("update book with title {}", bookDTO.getTitle());
+    Book updatedBook = BookMapper.INSTANCE.mapToEntity(bookDTO);
+    return BookMapper.INSTANCE.mapToDto(bookRepository.save(updatedBook));
   }
 
   @Override
   @Transactional
   public void delete(long id) throws ServiceException {
-    Book book =
-        bookRepository
-            .findById(id)
-            .orElseThrow(() -> new RepositoryException("Book with id " + id + " not found"));
-    bookRepository.delete(book);
+    try {
+      bookRepository
+          .findById(id)
+          .orElseThrow(() -> new RepositoryException("Book with id " + id + " not found"));
+      log.info("get book by id {}", id);
+    } catch (RepositoryException exception) {
+      throw new ServiceException(exception.getMessage());
+    }
+    bookRepository.setDeleteTrue(id);
     log.info("delete book by id {}", id);
   }
 

@@ -6,7 +6,7 @@ import com.epam.hw_5.service.exeption.RepositoryException;
 import java.util.List;
 
 public interface JdbcLibrarianRepository {
-  void save(User librarian) throws RepositoryException;
+  User save(User librarian) throws RepositoryException;
 
   List<User> getAll() throws RepositoryException;
 }

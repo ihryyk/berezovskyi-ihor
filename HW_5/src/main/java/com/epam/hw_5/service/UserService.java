@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface UserService {
 
-  public void save(UserDTO userDTO) throws ServiceException;
+  public UserDTO create(UserDTO userDTO);
+
+  public UserDTO update(UserDTO userDTO);
 
   public UserDTO getByEmailAndPassword(String email, String password) throws ServiceException;
 
